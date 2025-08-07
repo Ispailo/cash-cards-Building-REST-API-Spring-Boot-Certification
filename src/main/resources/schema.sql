@@ -4,3 +4,5 @@ CREATE TABLE cash_card
     AMOUNT NUMBER NOT NULL DEFAULT 0,
     OWNER    VARCHAR(256) NOT NULL
 );
+CREATE INDEX IF NOT EXISTS idx_cash_card_owner ON cash_card(OWNER);
+CREATE INDEX IF NOT EXISTS idx_cash_card_owner_id ON cash_card(OWNER, ID);
